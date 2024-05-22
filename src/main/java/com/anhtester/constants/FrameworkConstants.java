@@ -171,7 +171,7 @@ public final class FrameworkConstants {
     public static final String DRIP_CREATED_SUCCESS_MESSAGE = PropertiesHelpers.getValue("DRIP_CREATED_SUCCESS_MESSAGE");
     
 //    public static final String Batches = PropertiesHelpers.getValue("Batches");
-    public static final int Batches = Integer.parseInt(PropertiesHelpers.getValue("Batches"));
+    public static final int BATCH_SIZE = Integer.parseInt(PropertiesHelpers.getValue("BATCH_SIZE"));
     public static final String API_HEADER = PropertiesHelpers.getValue("API_HEADER");
     public static final String QA_ADMIN_EMAIL_ADDRESS = PropertiesHelpers.getValue("QA_ADMIN_EMAIL_ADDRESS");
     public static final String SERVER_USERNAME = PropertiesHelpers.getValue("SERVER_USERNAME");
@@ -182,7 +182,7 @@ public final class FrameworkConstants {
     public static final String QA_ADMIN_PASSWORD = PropertiesHelpers.getValue("QA_ADMIN_PASSWORD");
     public static final String MARKET_NAME = PropertiesHelpers.getValue("MARKET_NAME");
     public static final String AREA_CODE = PropertiesHelpers.getValue("AREA_CODE");
-    public static final String FORWARDDING_NUMBER = PropertiesHelpers.getValue("FORWARDDING_NUMBER");
+    public static final String CALL_FORWARDDING_NUMBER = PropertiesHelpers.getValue("CALL_FORWARDDING_NUMBER");
     public static final String CAMPAIGN_NAME = PropertiesHelpers.getValue("CAMPAIGN_NAME");
     public static final String SERVER_IP_ADDRESS = PropertiesHelpers.getValue("SERVER_IP_ADDRESS");
     public static final String API_URL = PropertiesHelpers.getValue("API_URL");

@@ -12,11 +12,11 @@ Feature: Change the Time Zone to UTC
   #When the EST timing is adjusted for today
     #Then the user turns off the server
     
-  #Scenario: 02 Delete all existing documents in MongoDB
-#Given the user initializes the MongoDB connection
-    #When the user deletes all existing documents from the collection
-    #Then no documents should exist in the collection
-    #And the user closes the MongoDB connection
+  Scenario: 02 Delete all existing documents in MongoDB
+Given the user initializes the MongoDB connection
+    When the user deletes all existing documents from the collection
+    Then no documents should exist in the collection
+    And the user closes the MongoDB connection
     
     
     #Scenario: 06 Changing the EST Time Zone after a week

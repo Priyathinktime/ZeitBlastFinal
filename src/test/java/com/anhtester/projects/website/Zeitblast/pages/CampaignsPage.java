@@ -81,15 +81,17 @@ public class CampaignsPage {
 		
 	}
 	
-	
 	public String Campaigndeliverabilitypercentage() {
-		String Campaigndeliverability = WebUI.getTextElement(By.xpath(FrameworkConstants.CAMPAIGN_DELIVERABILITY_STATUS)).replaceAll("[^\\d.]", "").replaceAll("\\.0*$", "") + "%";
+//		String Campaigndeliverability = WebUI.getTextElement(By.xpath("(//td)[13]")).replaceAll("[^\\d.]", "").replaceAll("\\.0*$", "");
+//		+ "%";
+		String Campaigndeliverability = WebUI.getTextElement(By.xpath("(//td)[13]")).replaceAll("[^\\d.]", "").split("\\.")[0];
 		System.out.println(Campaigndeliverability);
 		return Campaigndeliverability;
 		
 	}
 	public String CampaignResponsepercentage() {
-		String CampaignResponse = WebUI.getTextElement(By.xpath(FrameworkConstants.CAMPAIGN_RESPONSE_STATUS)).replaceAll("[^\\d.]", "").replaceAll("\\.0*$", "") + "%";;
+//		String CampaignResponse = WebUI.getTextElement(By.xpath("(//td)[14]")).replaceAll("[^\\d.]", "").replaceAll("\\.0*$", "");
+		String CampaignResponse = WebUI.getTextElement(By.xpath("(//td)[14]")).replaceAll("[^\\d.]", "").split("\\.")[0];
 		System.out.println(CampaignResponse);
 		return CampaignResponse;
 	}

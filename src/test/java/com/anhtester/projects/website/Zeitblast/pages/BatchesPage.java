@@ -53,7 +53,7 @@ public class BatchesPage {
 		WebUI.clickElement(By.xpath(FrameworkConstants.SELECT_BATCH_SIZE_BUTTON));
 
 //		WebUI.clickElement(By.xpath(("//button[contains(.,'"+FrameworkConstants.Batches+"')])[1]")));
-		WebUI.clickElement(By.xpath(("//button[.='"+FrameworkConstants.Batches+"']")));
+		WebUI.clickElement(By.xpath(("//button[.='"+FrameworkConstants.BATCH_SIZE+"']")));
 		
 		//button[.='"+FrameworkConstants.Batches+"']    "+FrameworkConstants.Batches+"
 		WebUI.clickElement(By.xpath(FrameworkConstants.CREATE_BATCH_BUTTON));
@@ -101,15 +101,21 @@ catch (TimeoutException e) {
 		Assert.assertEquals(WebUI.getTextElement(By.xpath(FrameworkConstants.OFFICE_TIMEOUT_MESSAGE)), FrameworkConstants.OFFICE_TIMEOUT_SUCCESS_MESSAGE);
 		System.out.println(FrameworkConstants.OFFICE_TIMEOUT_MESSAGE);
 	}
+
 	
 	public String batchesdeliverabilitypercentage() {
-		String  batchesdeliverability = WebUI.getTextElement(By.xpath(FrameworkConstants.BATCHES_DELIVERABILITY_STATUS)).replaceAll("[^\\d.]", "").replaceAll("\\.0*$", "") + "%";;
+//		String  batchesdeliverability = WebUI.getTextElement(By.xpath("(//div[@class='col data'])[5]")).replaceAll("[^\\d.]", "").replaceAll("\\.0*$", "") + "%";
+//		String batchesdeliverability = Math.round(Double.parseDouble(WebUI.getTextElement(By.xpath("(//div[@class='col data'])[5]").replaceAll("[^\\d.]", "")))) + "%";
+//		String batchesdeliverability = WebUI.getTextElement(By.xpath("(//div[@class='col data'])[5]").replaceAll("[^\\d.]", ""));
+		String batchesdeliverability = WebUI.getTextElement(By.xpath("(//div[@class='col data'])[5]")).replaceAll("[^\\d.]", "").split("\\.")[0];
+
 		System.out.println(batchesdeliverability);
 		return batchesdeliverability;
 		
 	}
 	public String batchesResponsepercentage() {
-		String batchesResponse = WebUI.getTextElement(By.xpath(FrameworkConstants.BATCHES_RESPONSE_STATUS)).replaceAll("[^\\d.]", "").replaceAll("\\.0*$", "") + "%";;
+//		String batchesResponse = WebUI.getTextElement(By.xpath("(//div[@class='col data'])[6]")).replaceAll("[^\\d.]", "").replaceAll("\\.0*$", "") + "%";
+		String batchesResponse = WebUI.getTextElement(By.xpath("(//div[@class='col data'])[6]")).replaceAll("[^\\d.]", "").split("\\.")[0];
 		System.out.println(batchesResponse);
 		return batchesResponse;
 		
